@@ -96,8 +96,8 @@
         }
 
         /* Hero Section */
-        #hero {
-            padding: 10rem 0 6rem;
+        #home {
+            padding: 12rem 0 8rem;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
             text-align: center;
@@ -115,7 +115,7 @@
             border: 1px solid rgba(96, 165, 250, 0.3);
         }
 
-        #hero h1 {
+        #home h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 800;
@@ -461,7 +461,7 @@
             nav ul {
                 display: none;
             }
-            #hero h1 {
+            #home h1 {
                 font-size: 2.25rem;
             }
             .hero-buttons {
@@ -476,25 +476,26 @@
     </style>
 </head>
 <body>
+
     <!-- Header / Navigation -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">Ershad Sulaiman</a>
+            <a href="#home" class="logo">Ershad Sulaiman</a>
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#experience">Experience & Labs</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#projects">Projects & Labs</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
                     <li><a href="#contact" class="nav-btn">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
+    <!-- Hero / Home Section -->
+    <section id="home">
         <div class="container hero-content">
             <span class="badge"><i class="fa-solid fa-shield-halved"></i> Aspiring Security Engineer</span>
             <h1>Ershad Sulaiman</h1>
@@ -503,7 +504,7 @@
                 Cybersecurity-focused Computer Science student with a strong Linux/Red Hat background, hands-on enterprise home lab infrastructure experience, and active participation in competitive Capture The Flag (CTF) events.
             </p>
             <div class="hero-buttons">
-                <a href="#experience" class="btn primary-btn"><i class="fa-solid fa-terminal"></i> View Projects</a>
+                <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-terminal"></i> View Projects</a>
                 <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
             </div>
             <div class="social-links">
@@ -520,38 +521,58 @@
             <h2 class="section-title">Professional Summary</h2>
             <div class="about-card">
                 <p>
-                    Cybersecurity-focused Computer Science student at George Mason University with a Linux/Red Hat background, CompTIA Security+ and Network+ certified, and hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization[cite: 1]. Actively competing in CTF competitions, including a sponsored seat at the National Cyber League, while working toward a career in security engineering[cite: 1].
+                    Cybersecurity-focused Computer Science student at George Mason University with a Linux/Red Hat background, CompTIA Security+ and Network+ certified, and hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization. Actively competing in CTF competitions, including a sponsored seat at the National Cyber League, while working toward a career in security engineering.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section bg-light">
+    <!-- Resume / Certifications & Education Section -->
+    <section id="resume" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-grid">
+            <h2 class="section-title">Certifications & Education</h2>
+            
+            <div class="cert-grid" style="margin-bottom: 3rem;">
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <h3>CompTIA Security+</h3>
-                    <p class="cert-date">Certified: June 2026 (SY0-701)[cite: 1]</p>
+                    <p class="cert-date">Certified: June 2026 (SY0-701)</p>
                 </div>
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <h3>CompTIA Network+</h3>
-                    <p class="cert-date">Certified: July 2026 (N10-009)[cite: 1]</p>
+                    <p class="cert-date">Certified: July 2026 (N10-009)</p>
                 </div>
                 <div class="cert-card in-progress">
                     <div class="cert-icon"><i class="fa-solid fa-spinner"></i></div>
                     <h3>AWS Certified Solutions Architect</h3>
-                    <p class="cert-date">In Progress[cite: 1]</p>
+                    <p class="cert-date">In Progress</p>
                 </div>
+            </div>
+
+            <div class="edu-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="edu-school">George Mason University - Fairfax, VA | Expected December 2028</p>
+                <p class="edu-details"><strong>GPA:</strong> 3.54 / 4.00</p>
+                <p class="edu-details"><strong>Relevant Coursework:</strong> Essentials of Computer Science, Intro to Computer Programming, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, Calculus III</p>
+                <p class="edu-details"><strong>Operating Systems:</strong> Linux (Red Hat), Windows, macOS</p>
+                <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)</p>
+            </div>
+            
+            <div class="edu-card" style="margin-top: 20px;">
+                <h3>Advanced High School Diploma</h3>
+                <p class="edu-school">Thomas Jefferson High School for Science and Technology (TJHSST) - Alexandria, VA | 2025</p>
+                <p class="edu-details"><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program</p>
+            </div>
+
+            <div class="club-badge" style="margin-top: 20px;">
+                <i class="fa-solid fa-users"></i> Incoming member, Mason Competitive Cyber (MasonCC) GMU's competitive cybersecurity club
             </div>
         </div>
     </section>
 
     <!-- Experience & Labs Section -->
-    <section id="experience" class="section">
+    <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Experience & Projects</h2>
             
@@ -560,14 +581,14 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">June 2026 - Ongoing[cite: 1]</span>
+                        <span class="timeline-date">June 2026 - Ongoing</span>
                         <h3>CTF & Security Competition Preparation</h3>
-                        <p class="timeline-location">TryHackMe, picoCTF, pwn.college, CryptoHack | Fairfax, VA[cite: 1]</p>
+                        <p class="timeline-location">TryHackMe, picoCTF, pwn.college, CryptoHack | Fairfax, VA</p>
                         <ul>
-                            <li>Selected as one of 30 sponsored students to compete in the National Cyber League (NCL) CTF competition[cite: 1].</li>
-                            <li>Assembling a personal CTF toolkit and competing in security capture-the-flag competitions (e.g., gaslightCTF)[cite: 1].</li>
-                            <li>Competed solo in BrunnerCTF against four-person teams, finishing in the 40th percentile of participants[cite: 1].</li>
-                            <li>Working through TryHackMe's Jr Penetration Tester path with supplementary practice on picoCTF, pwn.college, and CryptoHack[cite: 1].</li>
+                            <li>Selected as one of 30 sponsored students to compete in the National Cyber League (NCL) CTF competition.</li>
+                            <li>Assembling a personal CTF toolkit and competing in security capture-the-flag competitions (e.g., gaslightCTF).</li>
+                            <li>Competed solo in BrunnerCTF against four-person teams, finishing in the 40th percentile of participants.</li>
+                            <li>Working through TryHackMe's Jr Penetration Tester path with supplementary practice on picoCTF, pwn.college, and CryptoHack.</li>
                         </ul>
                     </div>
                 </div>
@@ -576,15 +597,15 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">August 2026 - Ongoing[cite: 1]</span>
+                        <span class="timeline-date">August 2026 - Ongoing</span>
                         <h3>Home Lab - Networking & Security Environment</h3>
-                        <p class="timeline-location">Proxmox VE, Windows Server, Active Directory, Tailscale | Fairfax, VA[cite: 1]</p>
+                        <p class="timeline-location">Proxmox VE, Windows Server, Active Directory, Tailscale | Fairfax, VA</p>
                         <ul>
-                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with two domain-joined Windows 11 client VMs[cite: 1].</li>
-                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway[cite: 1].</li>
-                            <li>Configured Wake-on-LAN and explored GPU passthrough to improve remote console performance[cite: 1].</li>
-                            <li>Designing VLAN segmentation for lab traffic isolation, using a managed switch alongside Tailscale for secure mesh connectivity between devices[cite: 1].</li>
-                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access into the lab, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets[cite: 1].</li>
+                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with two domain-joined Windows 11 client VMs.</li>
+                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway.</li>
+                            <li>Configured Wake-on-LAN and explored GPU passthrough to improve remote console performance.</li>
+                            <li>Designing VLAN segmentation for lab traffic isolation, using a managed switch alongside Tailscale for secure mesh connectivity between devices.</li>
+                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access into the lab, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
                         </ul>
                     </div>
                 </div>
@@ -599,66 +620,41 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                    <p>Python, Java, Unix[cite: 1]</p>
+                    <p>Python, Java, Unix</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-book-bookmark"></i> Frameworks & Standards</h3>
-                    <p>NIST Cybersecurity Framework, Zero Trust, CIA Triad, AAA Framework, MITRE ATT&CK Fundamentals[cite: 1]</p>
+                    <p>NIST Cybersecurity Framework, Zero Trust, CIA Triad, AAA Framework, MITRE ATT&CK Fundamentals</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
-                    <p>Git, Proxmox VE, VMware, pfSense, Tailscale, Wireshark, exiftool, steghide, binwalk, CyberChef[cite: 1]</p>
+                    <p>Git, Proxmox VE, VMware, pfSense, Tailscale, Wireshark, exiftool, steghide, binwalk, CyberChef</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-network-wired"></i> Networking & Protocols</h3>
-                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching Fundamentals, VPN (IPSec), Wake-on-LAN[cite: 1]</p>
+                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching Fundamentals, VPN (IPSec), Wake-on-LAN</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-lock"></i> Security Concepts</h3>
-                    <p>Access Control Models (RBAC/DAC/MAC), PKI, Symmetric/Asymmetric Encryption, Hashing, MFA, Firewalls, IDS/IPS Fundamentals[cite: 1]</p>
+                    <p>Access Control Models (RBAC/DAC/MAC), PKI, Symmetric/Asymmetric Encryption, Hashing, MFA, Firewalls, IDS/IPS Fundamentals</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-triangle-exclamation"></i> Threats & Attacks</h3>
-                    <p>Malware, Ransomware, Phishing, DDoS, Brute Force, Man-in-the-Middle, Insider Threats, Zero-Day Exploits[cite: 1]</p>
+                    <p>Malware, Ransomware, Phishing, DDoS, Brute Force, Man-in-the-Middle, Insider Threats, Zero-Day Exploits</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Education & Activities</h2>
-            <div class="edu-card">
-                <h3>Bachelor of Science in Computer Science</h3>
-                <p class="edu-school">George Mason University - Fairfax, VA | Expected December 2028[cite: 1]</p>
-                <p class="edu-details"><strong>GPA:</strong> 3.54 / 4.00[cite: 1]</p>
-                <p class="edu-details"><strong>Relevant Coursework:</strong> Essentials of Computer Science, Intro to Computer Programming, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, Calculus III[cite: 1]</p>
-                <p class="edu-details"><strong>Operating Systems:</strong> Linux (Red Hat), Windows, macOS[cite: 1]</p>
-                <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)[cite: 1]</p>
-            </div>
-            
-            <div class="edu-card" style="margin-top: 20px;">
-                <h3>Advanced High School Diploma</h3>
-                <p class="edu-school">Thomas Jefferson High School for Science and Technology (TJHSST) - Alexandria, VA | 2025[cite: 1]</p>
-                <p class="edu-details"><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program[cite: 1]</p>
-            </div>
-
-            <div class="club-badge" style="margin-top: 20px;">
-                <i class="fa-solid fa-users"></i> Incoming member, Mason Competitive Cyber (MasonCC) GMU's competitive cybersecurity club[cite: 1]
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-light">
-        <div class="container contact-container">
+    <section id="contact" class="section">
+        <div class="container contact-container" style="margin: 0 auto;">
             <h2 class="section-title">Get In Touch</h2>
             <p>I am actively looking for opportunities in security engineering and cybersecurity internships. Feel free to reach out!</p>
             <div class="contact-info">
-                <a href="mailto:esulaima@gmu.edu" class="contact-item"><i class="fa-solid fa-envelope"></i> esulaima@gmu.edu[cite: 1]</a>
-                <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632[cite: 1]</a>
-                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman[cite: 1]</a>
+                <a href="mailto:esulaima@gmu.edu" class="contact-item"><i class="fa-solid fa-envelope"></i> esulaima@gmu.edu</a>
+                <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632</a>
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman</a>
             </div>
         </div>
     </section>
@@ -669,5 +665,6 @@
             <p>&copy; 2026 Ershad Sulaiman. All Rights Reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
