@@ -1,174 +1,205 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Spectral by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ershad Sulaiman | Cybersecurity & Computer Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Ershad Sulaiman</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#experience">Experience & Labs</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <span class="badge"><i class="fa-solid fa-shield-halved"></i> Aspiring Security Engineer</span>
+            <h1>Ershad Sulaiman</h1>
+            <p class="subtitle">Computer Science Student at George Mason University | CompTIA Security+ & Network+ Certified</p>
+            <p class="hero-desc">
+                Cybersecurity-focused Computer Science student with a strong Linux/Red Hat background, hands-on enterprise home lab infrastructure experience, and active participation in competitive Capture The Flag (CTF) events.
+            </p>
+            <div class="hero-buttons">
+                <a href="#experience" class="btn primary-btn"><i class="fa-solid fa-terminal"></i> View Projects</a>
+                <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ershadsulaiman" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:esulaima@gmu.edu"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Spectral</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="about-card">
+                <p>
+                    Cybersecurity-focused Computer Science student at George Mason University with a Linux/Red Hat background, CompTIA Security+ and Network+ certified, and hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization. Actively competing in CTF competitions, including a sponsored seat at the National Cyber League, while working toward a career in security engineering.
+                </p>
+            </div>
+        </div>
+    </section>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Spectral</h2>
-							<p>Another fine responsive<br />
-							site template freebie<br />
-							crafted by <a href="http://html5up.net">HTML5 UP</a>.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button primary">Activate</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>CompTIA Security+</h3>
+                    <p class="cert-date">Certified: June 2026 (SY0-701)</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>CompTIA Network+</h3>
+                    <p class="cert-date">Certified: July 2026 (N10-009)[cite: 1]</p>
+                </div>
+                <div class="cert-card in-progress">
+                    <div class="cert-icon"><i class="fa-solid fa-spinner"></i></div>
+                    <h3>AWS Certified Solutions Architect</h3>
+                    <p class="cert-date">In Progress[cite: 1]</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Arcu aliquet vel lobortis ata nisl<br />
-								eget augue amet aliquet nisl cep donec</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section>
+    <!-- Experience & Labs Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience & Projects</h2>
+            
+            <div class="timeline">
+                <!-- CTF & Security Competitions -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">June 2026 - Ongoing[cite: 1]</span>
+                        <h3>CTF & Security Competition Preparation</h3>
+                        <p class="timeline-location">TryHackMe, picoCTF, pwn.college, CryptoHack | Fairfax, VA[cite: 1]</p>
+                        <ul>
+                            <li>Selected as one of 30 sponsored students to compete in the National Cyber League (NCL) CTF competition[cite: 1].</li>
+                            <li>Assembling a personal CTF toolkit and competing in security capture-the-flag competitions (e.g., gaslightCTF)[cite: 1].</li>
+                            <li>Competed solo in BrunnerCTF against four-person teams, finishing in the 40th percentile of participants[cite: 1].</li>
+                            <li>Working through TryHackMe's Jr Penetration Tester path with supplementary practice on picoCTF, pwn.college, and CryptoHack[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
 
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Magna primis lobortis<br />
-								sed ullamcorper</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Tortor dolore feugiat<br />
-								elementum magna</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Augue eleifend aliquet<br />
-								sed condimentum</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-					</section>
+                <!-- Home Lab -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">August 2026 - Ongoing[cite: 1]</span>
+                        <h3>Home Lab - Networking & Security Environment</h3>
+                        <p class="timeline-location">Proxmox VE, Windows Server, Active Directory, Tailscale | Fairfax, VA[cite: 1]</p>
+                        <ul>
+                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with two domain-joined Windows 11 client VMs[cite: 1].</li>
+                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway[cite: 1].</li>
+                            <li>Configured Wake-on-LAN and explored GPU passthrough to improve remote console performance[cite: 1].</li>
+                            <li>Designing VLAN segmentation for lab traffic isolation, using a managed switch alongside Tailscale for secure mesh connectivity between devices[cite: 1].</li>
+                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access into the lab, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                    <p>Python, Java, Unix[cite: 1]</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-book-bookmark"></i> Frameworks & Standards</h3>
+                    <p>NIST Cybersecurity Framework, Zero Trust, CIA Triad, AAA Framework, MITRE ATT&CK Fundamentals[cite: 1]</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
+                    <p>Git, Proxmox VE, VMware, pfSense, Tailscale, Wireshark, exiftool, steghide, binwalk, CyberChef[cite: 1]</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-network-wired"></i> Networking & Protocols</h3>
+                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching Fundamentals, VPN (IPSec), Wake-on-LAN[cite: 1]</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-lock"></i> Security Concepts</h3>
+                    <p>Access Control Models (RBAC/DAC/MAC), PKI, Symmetric/Asymmetric Encryption, Hashing, MFA, Firewalls, IDS/IPS Fundamentals[cite: 1]</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Threats & Attacks</h3>
+                    <p>Malware, Ransomware, Phishing, DDoS, Brute Force, Man-in-the-Middle, Insider Threats, Zero-Day Exploits[cite: 1]</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education & Activities</h2>
+            <div class="edu-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="edu-school">George Mason University - Fairfax, VA | Expected December 2028[cite: 1]</p>
+                <p class="edu-details"><strong>GPA:</strong> 3.54 / 4.00[cite: 1]</p>
+                <p class="edu-details"><strong>Relevant Coursework:</strong> Essentials of Computer Science, Intro to Computer Programming, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, Calculus III[cite: 1]</p>
+                <p class="edu-details"><strong>Operating Systems:</strong> Linux (Red Hat), Windows, macOS[cite: 1]</p>
+                <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)[cite: 1]</p>
+            </div>
+            
+            <div class="edu-card" style="margin-top: 20px;">
+                <h3>Advanced High School Diploma</h3>
+                <p class="edu-school">Thomas Jefferson High School for Science and Technology (TJHSST) - Alexandria, VA | 2025[cite: 1]</p>
+                <p class="edu-details"><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program[cite: 1]</p>
+            </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+            <div class="club-badge" style="margin-top: 20px;">
+                <i class="fa-solid fa-users"></i> Incoming member, Mason Competitive Cyber (MasonCC) GMU's competitive cybersecurity club[cite: 1]
+            </div>
+        </div>
+    </section>
 
-			</div>
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I am actively looking for opportunities in security engineering and cybersecurity internships. Feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="mailto:esulaima@gmu.edu" class="contact-item"><i class="fa-solid fa-envelope"></i> esulaima@gmu.edu[cite: 1]</a>
+                <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632[cite: 1]</a>
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman[cite: 1]</a>
+            </div>
+        </div>
+    </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ershad Sulaiman. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
