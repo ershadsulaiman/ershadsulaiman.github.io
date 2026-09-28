@@ -235,10 +235,6 @@
             margin-bottom: 1rem;
         }
 
-        .cert-card.in-progress .cert-icon {
-            color: #d97706;
-        }
-
         .cert-card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
@@ -290,14 +286,6 @@
             padding: 1.5rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
-        }
-
-        .timeline-date {
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 0.25rem;
         }
 
         .timeline-content h3 {
@@ -506,7 +494,7 @@
             <div class="social-links">
                 <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/ershadsulaiman" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:esulaima@gmu.edu"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:ershadsulaiman@outlook.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="resume.pdf" target="_blank" title="Resume (PDF)"><i class="fa-solid fa-file-pdf"></i></a>
             </div>
         </div>
@@ -532,28 +520,22 @@
             <div class="cert-grid" style="margin-bottom: 3rem;">
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                    <h3>CompTIA Security+</h3>
-                    <p class="cert-date">Certified: June 2026 (SY0-701)</p>
+                    <h3>CompTIA Security+ (SY0-701)</h3>
+                    <p class="cert-date">Certified: June 2026</p>
                 </div>
                 
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                    <h3>CompTIA Network+</h3>
-                    <p class="cert-date">Certified: July 2026 (N10-009)</p>
-                </div>
-
-                <div class="cert-card in-progress">
-                    <div class="cert-icon"><i class="fa-solid fa-spinner"></i></div>
-                    <h3>AWS Certified Solutions Architect</h3>
-                    <p class="cert-date">In Progress</p>
+                    <h3>CompTIA Network+ (N10-009)</h3>
+                    <p class="cert-date">Certified: July 2026</p>
                 </div>
             </div>
 
             <div class="edu-card">
                 <h3>Bachelor of Science in Computer Science</h3>
-                <p class="edu-school">George Mason University &mdash; Fairfax, VA &middot; Expected May 2028</p>
+                <p class="edu-school">George Mason University &mdash; Fairfax, VA &middot; Expected December 2028</p>
+                <p class="edu-details"><strong>GPA:</strong> 3.54/4.00</p>
                 <p class="edu-details"><strong>Relevant Coursework:</strong> Essentials of Computer Science, Intro to Computer Programming, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, Calculus III</p>
-                <p class="edu-details"><strong>Operating Systems:</strong> Linux (Red Hat), Windows, macOS</p>
                 <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)</p>
             </div>
 
@@ -583,9 +565,8 @@
                         <p class="timeline-location">TryHackMe &middot; picoCTF &middot; pwn.college &middot; CryptoHack &mdash; Fairfax, VA</p>
                         <ul>
                             <li>Selected as 1 of 30 sponsored students nationwide to compete in the National Cyber League (NCL) CTF competition.</li>
-                            <li>Built a personal CTF toolkit spanning reconnaissance, forensics, and exploitation, applied across live competitions such as gaslightCTF.</li>
+                            <li>Built a personal CTF toolkit using Python scripting for automation, spanning Nmap scanning and enumeration, cryptography challenges, and digital forensics (steganography, file analysis, PCAP analysis), applied across live competitions such as gaslightCTF.</li>
                             <li>Competed solo in BrunnerCTF against four-person teams, placing in the top 40th percentile of participants.</li>
-                            <li>Working through TryHackMe's Jr Penetration Tester path with supplementary practice on picoCTF, pwn.college, and CryptoHack.</li>
                         </ul>
                     </div>
                 </div>
@@ -597,11 +578,11 @@
                         <h3>Home Lab &mdash; Networking & Security Environment</h3>
                         <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; Tailscale &mdash; Fairfax, VA</p>
                         <ul>
-                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with two domain-joined Windows 11 client VMs.</li>
+                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with DNS and DHCP roles, creating AD users, groups, and OUs and domain-joining two Windows 11 client VMs.</li>
                             <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway, restoring client connectivity.</li>
-                            <li>Configured Wake-on-LAN and explored GPU passthrough to improve remote console performance.</li>
-                            <li>Designing VLAN segmentation for lab traffic isolation, using a managed switch alongside Tailscale for secure mesh connectivity between devices.</li>
-                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access into the lab, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
+                            <li>Configured static IP addressing, subnet planning, and port forwarding on the network gateway, and maintained VM snapshots and backups in Proxmox.</li>
+                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access and SSH-based administration, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
+                            <li>Designing VLAN segmentation for lab traffic isolation using a managed switch, paired with Tailscale for secure mesh connectivity between devices; documenting lab network diagrams and configurations (in progress).</li>
                         </ul>
                     </div>
                 </div>
@@ -650,7 +631,7 @@
             <p>I am actively looking for opportunities in security engineering and cybersecurity internships. Feel free to reach out!</p>
             
             <div class="contact-info">
-                <a href="mailto:esulaima@gmu.edu" class="contact-item"><i class="fa-solid fa-envelope"></i> esulaima@gmu.edu</a>
+                <a href="mailto:ershadsulaiman@outlook.com" class="contact-item"><i class="fa-solid fa-envelope"></i> ershadsulaiman@outlook.com</a>
                 <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632</a>
                 <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman</a>
             </div>
