@@ -17,30 +17,25 @@
             --border-color: #e2e8f0;
             --transition: all 0.3s ease;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-main);
             background-color: var(--bg-main);
             line-height: 1.6;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
         /* Header */
         header {
             background: var(--bg-main);
@@ -51,50 +46,42 @@
             width: 100%;
             z-index: 1000;
         }
-
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-weight: 700;
             font-size: 1.25rem;
             color: var(--primary);
             text-decoration: none;
         }
-
         nav ul {
             display: flex;
             list-style: none;
             gap: 1.5rem;
             align-items: center;
         }
-
         nav a {
             text-decoration: none;
             color: var(--text-main);
             font-weight: 500;
             transition: var(--transition);
         }
-
         nav a:hover {
             color: var(--accent);
         }
-
         .nav-btn {
             background-color: var(--accent);
             color: white !important;
             padding: 0.5rem 1rem;
             border-radius: 4px;
         }
-
         .nav-btn:hover {
             background-color: var(--accent-hover);
         }
-
         /* Hero Section */
         #home {
             padding: 12rem 0 8rem;
@@ -102,7 +89,6 @@
             color: white;
             text-align: center;
         }
-
         .badge {
             background: rgba(37, 99, 235, 0.2);
             color: #60a5fa;
@@ -114,27 +100,23 @@
             margin-bottom: 1.5rem;
             border: 1px solid rgba(96, 165, 250, 0.3);
         }
-
         #home h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 800;
         }
-
         .hero-desc {
             max-width: 700px;
             margin: 0 auto 2rem;
             color: #cbd5e1;
             font-size: 1.05rem;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             margin-bottom: 2rem;
         }
-
         .btn {
             padding: 0.75rem 1.5rem;
             border-radius: 6px;
@@ -142,52 +124,42 @@
             font-weight: 600;
             transition: var(--transition);
         }
-
         .primary-btn {
             background-color: var(--accent);
             color: white;
         }
-
         .primary-btn:hover {
             background-color: var(--accent-hover);
         }
-
         .secondary-btn {
             background: transparent;
             color: white;
             border: 1px solid #475569;
         }
-
         .secondary-btn:hover {
             border-color: white;
             background: rgba(255, 255, 255, 0.05);
         }
-
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
         }
-
         .social-links a {
             color: #94a3b8;
             font-size: 1.25rem;
             transition: var(--transition);
         }
-
         .social-links a:hover {
             color: white;
         }
-
         /* Sections General */
         .section {
             padding: 5rem 0;
         }
-
         .bg-light {
             background-color: var(--bg-light);
         }
-
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -195,7 +167,6 @@
             margin-bottom: 3rem;
             text-align: center;
         }
-
         /* About Section */
         .about-card {
             background: white;
@@ -207,14 +178,12 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
         /* Certifications */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-
         .cert-card {
             background: white;
             padding: 2rem;
@@ -223,36 +192,30 @@
             text-align: center;
             transition: var(--transition);
         }
-
         .cert-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
-
         .cert-icon {
             font-size: 2.5rem;
             color: var(--accent);
             margin-bottom: 1rem;
         }
-
         .cert-card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: var(--primary);
         }
-
         .cert-date {
             color: var(--text-light);
             font-size: 0.875rem;
         }
-
         /* Timeline Experience */
         .timeline {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
         }
-
         .timeline::before {
             content: '';
             position: absolute;
@@ -262,13 +225,11 @@
             width: 2px;
             background: var(--border-color);
         }
-
         .timeline-item {
             position: relative;
             margin-bottom: 2.5rem;
             padding-left: 50px;
         }
-
         .timeline-dot {
             position: absolute;
             left: 14px;
@@ -280,50 +241,42 @@
             border: 3px solid white;
             box-shadow: 0 0 0 2px var(--accent);
         }
-
         .timeline-content {
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
-
         .timeline-content h3 {
             font-size: 1.25rem;
             color: var(--primary);
             margin-bottom: 0.25rem;
         }
-
         .timeline-location {
             font-size: 0.875rem;
             color: var(--text-light);
             margin-bottom: 1rem;
         }
-
         .timeline-content ul {
             list-style-type: disc;
             padding-left: 1.2rem;
         }
-
         .timeline-content li {
             margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
-
         /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
         }
-
         .skill-category {
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
-
         .skill-category h3 {
             font-size: 1.1rem;
             color: var(--primary);
@@ -332,16 +285,13 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .skill-category h3 i {
             color: var(--accent);
         }
-
         .skill-category p {
             font-size: 0.95rem;
             color: var(--text-main);
         }
-
         /* Education */
         .edu-card {
             background: white;
@@ -351,24 +301,20 @@
             max-width: 900px;
             margin: 0 auto;
         }
-
         .edu-card h3 {
             font-size: 1.25rem;
             color: var(--primary);
             margin-bottom: 0.25rem;
         }
-
         .edu-school {
             font-size: 0.95rem;
             color: var(--text-light);
             margin-bottom: 1rem;
         }
-
         .edu-details {
             margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
-
         .club-badge {
             background: white;
             padding: 1rem 1.5rem;
@@ -382,30 +328,25 @@
             align-items: center;
             gap: 0.75rem;
         }
-
         .club-badge i {
             color: var(--accent);
             font-size: 1.2rem;
         }
-
         /* Contact */
         .contact-container {
             text-align: center;
             max-width: 700px;
         }
-
         .contact-container p {
             margin-bottom: 2rem;
             color: var(--text-light);
         }
-
         .contact-info {
             display: flex;
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
         }
-
         .contact-item {
             background: white;
             padding: 1rem 1.5rem;
@@ -419,16 +360,13 @@
             gap: 0.5rem;
             transition: var(--transition);
         }
-
         .contact-item i {
             color: var(--accent);
         }
-
         .contact-item:hover {
             border-color: var(--accent);
             transform: translateY(-2px);
         }
-
         /* Footer */
         footer {
             background: var(--primary);
@@ -437,26 +375,12 @@
             padding: 2rem 0;
             font-size: 0.875rem;
         }
-
         /* Responsive */
         @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
-            #home h1 {
-                font-size: 2.25rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                padding: 0 2rem;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            nav ul { display: none; }
+            #home h1 { font-size: 2.25rem; }
+            .hero-buttons { flex-direction: column; padding: 0 2rem; }
+            .contact-info { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
@@ -516,14 +440,12 @@
     <section id="resume" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Certifications & Education</h2>
-            
             <div class="cert-grid" style="margin-bottom: 3rem;">
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <h3>CompTIA Security+ (SY0-701)</h3>
                     <p class="cert-date">Certified: June 2026</p>
                 </div>
-                
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <h3>CompTIA Network+ (N10-009)</h3>
@@ -555,8 +477,8 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Experience & Projects</h2>
-            
             <div class="timeline">
+
                 <!-- CTF & Security Competitions -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
@@ -579,13 +501,27 @@
                         <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; Tailscale &mdash; Fairfax, VA</p>
                         <ul>
                             <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with DNS and DHCP roles, creating AD users, groups, and OUs and domain-joining two Windows 11 client VMs.</li>
-                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway, restoring client connectivity.</li>
+                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway, solved within 10 minutes, restoring client connectivity.</li>
                             <li>Configured static IP addressing, subnet planning, and port forwarding on the network gateway, and maintained VM snapshots and backups in Proxmox.</li>
-                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access and SSH-based administration, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
+                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access and SSH-based administration with 24/7 uptime, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
                             <li>Designing VLAN segmentation for lab traffic isolation using a managed switch, paired with Tailscale for secure mesh connectivity between devices; documenting lab network diagrams and configurations (in progress).</li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- Tech Assistant Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Tech Assistant &mdash; Fairfax County Public Schools / TJHSST</h3>
+                        <p class="timeline-location">Chromebook Imaging &amp; Hardware Support &middot; Summer 2023 &mdash; Annandale, VA</p>
+                        <ul>
+                            <li>Reimaged 2,000+ school Chromebooks and set up desktop and monitor installs as part of a five-person tech team.</li>
+                            <li>Troubleshot classroom hardware (printers, projectors) and reported progress to IT supervisors.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -594,11 +530,14 @@
     <section id="skills" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
-            
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-code"></i> Languages</h3>
                     <p>Python, Java, Unix</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-laptop"></i> Operating Systems</h3>
+                    <p>Linux (Red Hat), Windows, macOS</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-book-bookmark"></i> Frameworks & Standards</h3>
@@ -614,11 +553,15 @@
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-lock"></i> Security Concepts</h3>
-                    <p>Access Control (RBAC/DAC/MAC), PKI, Encryption, Hashing, MFA, Firewalls, IDS/IPS</p>
+                    <p>Access Control (RBAC/DAC/MAC), PKI, Symmetric/Asymmetric Encryption, Hashing, MFA, Firewalls, IDS/IPS</p>
                 </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-triangle-exclamation"></i> Threats & Attacks</h3>
                     <p>Malware, Ransomware, Phishing, DDoS, Brute Force, Man-in-the-Middle, Insider Threats, Zero-Day Exploits</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-user-check"></i> Soft Skills</h3>
+                    <p>Adaptability</p>
                 </div>
             </div>
         </div>
@@ -629,7 +572,6 @@
         <div class="container contact-container" style="margin: 0 auto;">
             <h2 class="section-title">Get In Touch</h2>
             <p>I am actively looking for opportunities in security engineering and cybersecurity internships. Feel free to reach out!</p>
-            
             <div class="contact-info">
                 <a href="mailto:ershadsulaiman@outlook.com" class="contact-item"><i class="fa-solid fa-envelope"></i> ershadsulaiman@outlook.com</a>
                 <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632</a>
