@@ -377,10 +377,20 @@
         }
         /* Responsive */
         @media (max-width: 768px) {
-            nav ul { display: none; }
-            #home h1 { font-size: 2.25rem; }
-            .hero-buttons { flex-direction: column; padding: 0 2rem; }
-            .contact-info { flex-direction: column; gap: 1rem; }
+            nav ul {
+                display: none;
+            }
+            #home h1 {
+                font-size: 2.25rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                padding: 0 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -430,7 +440,7 @@
             <h2 class="section-title">Professional Summary</h2>
             <div class="about-card">
                 <p>
-                    Cybersecurity-focused Computer Science student at George Mason University with a Linux/Red Hat background, CompTIA Security+ and Network+ certified, and hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization. Actively competing in CTF competitions, including a sponsored seat at the National Cyber League, while working toward a career in security engineering.
+                    Cybersecurity-focused Computer Science student at George Mason University with a Linux CLI and Kali Linux background, CompTIA Security+ and Network+ certified, and hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization. Actively competing in CTF competitions, including earning a sponsored seat at the National Cyber League, while working toward a career in security engineering.
                 </p>
             </div>
         </div>
@@ -440,6 +450,7 @@
     <section id="resume" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Certifications & Education</h2>
+            
             <div class="cert-grid" style="margin-bottom: 3rem;">
                 <div class="cert-card">
                     <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
@@ -478,7 +489,7 @@
         <div class="container">
             <h2 class="section-title">Experience & Projects</h2>
             <div class="timeline">
-
+                
                 <!-- CTF & Security Competitions -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
@@ -486,9 +497,9 @@
                         <h3>CTF & Security Competitor</h3>
                         <p class="timeline-location">TryHackMe &middot; picoCTF &middot; pwn.college &middot; CryptoHack &mdash; Fairfax, VA</p>
                         <ul>
-                            <li>Selected as 1 of 30 sponsored students nationwide to compete in the National Cyber League (NCL) CTF competition.</li>
-                            <li>Built a personal CTF toolkit using Python scripting for automation, spanning Nmap scanning and enumeration, cryptography challenges, and digital forensics (steganography, file analysis, PCAP analysis), applied across live competitions such as gaslightCTF.</li>
-                            <li>Competed solo in BrunnerCTF against four-person teams, placing in the top 40th percentile of participants.</li>
+                            <li>Placed in the first 30 of 100+ competitors in MasonCC’s CTF qualifier, earning a sponsored National Cyber League (NCL) seat.</li>
+                            <li>Completed 50+ challenges and rooms across forensics, cryptography, reverse engineering, and reconnaissance.</li>
+                            <li>Competed solo in BrunnerCTF against four-person teams, placing in the top 40% of 2,900 registered participants.</li>
                         </ul>
                     </div>
                 </div>
@@ -497,14 +508,12 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Home Lab &mdash; Networking & Security Environment</h3>
-                        <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; Tailscale &mdash; Fairfax, VA</p>
+                        <h3>Home Lab &mdash; Enterprise Network & Active Directory Environment</h3>
+                        <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; VLANs &middot; Tailscale &mdash; Fairfax, VA</p>
                         <ul>
                             <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with DNS and DHCP roles, creating AD users, groups, and OUs and domain-joining two Windows 11 client VMs.</li>
-                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway, solved within 10 minutes, restoring client connectivity.</li>
-                            <li>Configured static IP addressing, subnet planning, and port forwarding on the network gateway, and maintained VM snapshots and backups in Proxmox.</li>
-                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access and SSH-based administration with 24/7 uptime, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
-                            <li>Designing VLAN segmentation for lab traffic isolation using a managed switch, paired with Tailscale for secure mesh connectivity between devices; documenting lab network diagrams and configurations (in progress).</li>
+                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the home network gateway within 10 minutes, restoring connectivity for 20 devices; configured static IP addressing and subnet planning and maintained biweekly VM snapshots and backups across 4 VMs.</li>
+                            <li>Configured 2 VLANs on a managed switch for lab traffic isolation and a Raspberry Pi running Tailscale for encrypted remote access and SSH administration; deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
                         </ul>
                     </div>
                 </div>
@@ -516,8 +525,8 @@
                         <h3>Tech Assistant &mdash; Fairfax County Public Schools / TJHSST</h3>
                         <p class="timeline-location">Chromebook Imaging &amp; Hardware Support &middot; Summer 2023 &mdash; Annandale, VA</p>
                         <ul>
-                            <li>Reimaged 2,000+ school Chromebooks and set up desktop and monitor installs as part of a five-person tech team.</li>
-                            <li>Troubleshot classroom hardware (printers, projectors) and reported progress to IT supervisors.</li>
+                            <li>Reimaged 2,000+ school Chromebooks over 4 weeks and set up desktop and monitor installs as part of a five-person tech team.</li>
+                            <li>Resolved 10+ classroom hardware tickets, getting teachers’ computers, projectors, and printers connected and running, escalating issues beyond scope to the school technician and reporting progress to IT supervisors.</li>
                         </ul>
                     </div>
                 </div>
@@ -531,38 +540,47 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
+                
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                    <p>Python, Java, Unix</p>
+                    <p>Python, Java (OOP), Dari, Farsi, Tajik, Spanish</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-laptop"></i> Operating Systems</h3>
-                    <p>Linux (Red Hat), Windows, macOS</p>
+                    <p>Kali Linux, Windows Server 2025, Windows 11</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-book-bookmark"></i> Frameworks & Standards</h3>
                     <p>NIST Cybersecurity Framework, Zero Trust, CIA Triad, AAA Framework, MITRE ATT&CK Fundamentals</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
-                    <p>Git, Proxmox VE, VMware, pfSense, Tailscale, Wireshark, exiftool, steghide, binwalk, CyberChef</p>
+                    <p>Proxmox VE, Nmap, John the Ripper, Netcat, Ghidra, steghide, binwalk, exiftool, Wireshark, CyberChef</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-network-wired"></i> Networking & Protocols</h3>
-                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching, VPN (IPSec), Wake-on-LAN</p>
+                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching, VPN (Tailscale/WireGuard)</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-lock"></i> Security Concepts</h3>
                     <p>Access Control (RBAC/DAC/MAC), PKI, Symmetric/Asymmetric Encryption, Hashing, MFA, Firewalls, IDS/IPS</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-triangle-exclamation"></i> Threats & Attacks</h3>
                     <p>Malware, Ransomware, Phishing, DDoS, Brute Force, Man-in-the-Middle, Insider Threats, Zero-Day Exploits</p>
                 </div>
+
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-user-check"></i> Soft Skills</h3>
                     <p>Adaptability</p>
                 </div>
+
             </div>
         </div>
     </section>
