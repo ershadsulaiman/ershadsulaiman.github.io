@@ -308,4 +308,310 @@
         }
         .edu-school {
             font-size: 0.95rem;
-            color: var
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .edu-details {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .club-badge {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 500;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .club-badge i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        /* Contact */
+        .contact-container {
+            text-align: center;
+            max-width: 700px;
+        }
+        .contact-container p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .contact-item i {
+            color: var(--accent);
+        }
+        .contact-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.875rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            #home h1 {
+                font-size: 2.25rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                padding: 0 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo">Ershad Sulaiman</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#projects">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Home Section -->
+    <section id="home">
+        <div class="container hero-content">
+            <span class="badge"><i class="fa-solid fa-shield-halved"></i> Aspiring Blue Team Analyst</span>
+            <h1>Ershad Sulaiman</h1>
+            <p class="hero-desc">
+                Computer Science student at George Mason University, CompTIA Security+ & Network+ certified, building hands-on infrastructure and competing in Capture The Flag events on the way to a career in blue team operations and defense.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-terminal"></i> View Experience</a>
+                <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ershadsulaiman" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ershadsulaiman@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="resume.pdf" target="_blank" title="Resume (PDF)"><i class="fa-solid fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="about-card">
+                <p>
+                    Cybersecurity-focused Computer Science student at George Mason University with a passion for blue team operations. CompTIA Security+ and Network+ certified with hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization. Actively competing in CTF competitions and expanding my digital forensics and defensive security skillsets.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume / Certifications & Education Section -->
+    <section id="resume" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications & Education</h2>
+            
+            <div class="cert-grid" style="margin-bottom: 3rem;">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>CompTIA Security+ (SY0-701)</h3>
+                    <p class="cert-date">Certified: June 2026</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>CompTIA Network+ (N10-009)</h3>
+                    <p class="cert-date">Certified: July 2026</p>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="edu-school">George Mason University &mdash; Fairfax, VA &middot; Expected December 2028</p>
+                <p class="edu-details"><strong>Relevant Coursework:</strong> Intro to Computer Programming, Object-Oriented Programming, Discrete Math, Linear Algebra, Calculus I-III</p>
+                <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)</p>
+            </div>
+
+            <div class="edu-card" style="margin-top: 20px;">
+                <h3>Advanced High School Diploma</h3>
+                <p class="edu-school">Thomas Jefferson High School for Science and Technology (TJHSST) &mdash; Alexandria, VA &middot; 2025</p>
+                <p class="edu-details"><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience & Extracurriculars</h2>
+            
+            <div class="timeline">
+                
+                <!-- Home Lab -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Home Lab &mdash; Networking & Security Environment</h3>
+                        <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; Tailscale &mdash; Fairfax, VA &middot; June 2026 – August 2026</p>
+                        <ul>
+                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory controller with DNS and DHCP roles, creating AD users, groups, and OUs and domain-joining two Windows 11 client VMs.</li>
+                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway, solved within 10 minutes, restoring connectivity for 20 devices.</li>
+                            <li>Configured static IP addressing and subnet planning on the network gateway, and maintained biweekly VM snapshots and backups across 4 VMs in Proxmox.</li>
+                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access and SSH-based administration with 30 days of continuous uptime, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
+                            <li>Configured 2 VLANs across 4 ports on a managed switch for lab traffic isolation (2 devices on one VLAN, 1 on the other), paired with Tailscale for secure mesh connectivity between devices; documenting lab network diagrams and configurations (in progress).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTF & Security Competitions -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>CTF & Security Competitor</h3>
+                        <p class="timeline-location">TryHackMe &middot; picoCTF &middot; pwn.college &middot; CryptoHack &mdash; Fairfax, VA &middot; August 2026 – Present</p>
+                        <ul>
+                            <li>Placed in the first 30 of 100+ competitors in MasonCC's CTF qualifier, earning a sponsored National Cyber League (NCL) seat.</li>
+                            <li>Built a personal digital forensics toolkit using Python scripting for automation, spanning PCAP network traffic analysis, steganography and file analysis, cryptography challenges, and Nmap-based reconnaissance, applied across 4 live competitions.</li>
+                            <li>Competed solo in BrunnerCTF against four-person teams, placing in the top 40% of 2,900 registered participants.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Muslim Student Association -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Muslim Student Association (MSA) - TJHSST</h3>
+                        <p class="timeline-location">Treasurer &rarr; President &mdash; Alexandria, VA &middot; 2024 – 2025</p>
+                        <ul>
+                            <li>Led a board of 10 through weekly meetings, delegating social media, event-timing, and treasury coordination, growing average weekly turnout from 24 to 32.</li>
+                            <li>Spearheaded school-wide events, including an Eid celebration that drew 100-150 attendees and an Iftar that drew 40+, promoted through social media.</li>
+                            <li>Managed club finances as Treasurer, raising $600 from a single sales event and $100-$200 per bake sale.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tech Assistant Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Tech Assistant &mdash; Fairfax County Public Schools / TJHSST</h3>
+                        <p class="timeline-location">Hardware Support &mdash; Annandale, VA &middot; Summer 2023</p>
+                        <ul>
+                            <li>Reimaged 2,000+ school Chromebooks over 4 weeks and set up desktop and monitor installs as part of a five-person tech team.</li>
+                            <li>Troubleshot and resolved 10+ classroom hardware tickets (printers, projectors), reporting progress to IT supervisors.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-network-wired"></i> Networking & Protocols</h3>
+                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching, VPN (Tailscale/WireGuard)</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-server"></i> Systems & Virtualization</h3>
+                    <p>Proxmox VE, Windows Server 2025, Active Directory Administration, Windows 11 Client Management, VM Snapshots & Backups</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-lock"></i> Security & Access</h3>
+                    <p>Access Control (AD Groups/OUs), Encrypted Remote Access, SSH Remote Administration</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-magnifying-glass"></i> Forensics & Analysis</h3>
+                    <p>Wireshark (PCAP Analysis), CyberChef, Steganography & File Analysis (steghide, binwalk, exiftool), Cryptography Challenge-Solving, Nmap Reconnaissance</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Programming</h3>
+                    <p>Python (Automation/Scripting), Java (OOP)</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-language"></i> Spoken Languages</h3>
+                    <p>Dari, English, Farsi, Tajik (fluent), Spanish (professional)</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-user-check"></i> Soft Skills</h3>
+                    <p>Leadership, Autonomy, Hardware/Software Troubleshooting, Technical Communication</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container contact-container" style="margin: 0 auto;">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I am actively looking for opportunities as a Blue Team Analyst and in security engineering. Feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="mailto:ershadsulaiman@outlook.com" class="contact-item"><i class="fa-solid fa-envelope"></i> ershadsulaiman@outlook.com</a>
+                <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632</a>
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ershad Sulaiman. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
