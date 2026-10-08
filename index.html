@@ -62,6 +62,7 @@
             display: flex;
             list-style: none;
             gap: 1.5rem;
+            align-items: center;
         }
         nav a {
             text-decoration: none;
@@ -72,270 +73,514 @@
         nav a:hover {
             color: var(--accent);
         }
-        /* Sections */
-        section {
-            padding: 6rem 0 4rem;
-            border-bottom: 1px solid var(--border-color);
+        .nav-btn {
+            background-color: var(--accent);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
         }
-        h1, h2, h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
+        .nav-btn:hover {
+            background-color: var(--accent-hover);
         }
-        h2 {
-            font-size: 2rem;
+        /* Hero Section */
+        #home {
+            padding: 12rem 0 8rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
             text-align: center;
-            margin-bottom: 2.5rem;
         }
-        /* Hero */
-        .hero {
-            text-align: center;
-            padding-top: 8rem;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-light);
+        .badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
             margin-bottom: 1.5rem;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .hero-desc {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .primary-btn {
+            background-color: var(--accent);
+            color: white;
+        }
+        .primary-btn:hover {
+            background-color: var(--accent-hover);
+        }
+        .secondary-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid #475569;
+        }
+        .secondary-btn:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.05);
         }
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 2rem;
         }
         .social-links a {
-            color: var(--text-main);
-            font-size: 1.5rem;
+            color: #94a3b8;
+            font-size: 1.25rem;
             transition: var(--transition);
         }
         .social-links a:hover {
-            color: var(--accent);
+            color: white;
         }
-        /* Timeline Items (Education, Experience, Projects) */
-        .timeline {
+        /* Sections General */
+        .section {
+            padding: 5rem 0;
+        }
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        /* About Section */
+        .about-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 1.125rem;
+            text-align: center;
             max-width: 800px;
             margin: 0 auto;
         }
-        .timeline-item {
-            padding: 1.5rem;
-            background: var(--bg-light);
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .cert-card {
+            background: white;
+            padding: 2rem;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .cert-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        .cert-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+        /* Timeline Experience */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 2px;
+            background: var(--border-color);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 50px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 14px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
         }
-        .timeline-item h3 {
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
             margin-bottom: 0.25rem;
         }
         .timeline-location {
-            font-size: 0.95rem;
+            font-size: 0.875rem;
             color: var(--text-light);
             margin-bottom: 1rem;
-            font-style: italic;
         }
-        .timeline-item ul {
-            margin-left: 1.5rem;
+        .timeline-content ul {
+            list-style-type: disc;
+            padding-left: 1.2rem;
         }
-        .timeline-item li {
+        .timeline-content li {
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
         }
         .skill-category {
-            background: var(--bg-light);
+            background: white;
             padding: 1.5rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
         .skill-category h3 {
             font-size: 1.1rem;
-            margin-bottom: 1rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+        .skill-category h3 i {
+            color: var(--accent);
+        }
+        .skill-category p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+        /* Education */
+        .edu-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .edu-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .edu-school {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .edu-details {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .club-badge {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 500;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .club-badge i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        /* Contact */
+        .contact-container {
+            text-align: center;
+            max-width: 700px;
+        }
+        .contact-container p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .contact-item i {
+            color: var(--accent);
+        }
+        .contact-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
         /* Footer */
         footer {
+            background: var(--primary);
+            color: #94a3b8;
             text-align: center;
             padding: 2rem 0;
-            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            #home h1 { font-size: 2.25rem; }
+            .hero-buttons { flex-direction: column; padding: 0 2rem; }
+            .contact-info { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">Ershad Sulaiman</a>
+            <a href="#home" class="logo">Ershad Sulaiman</a>
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience & Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#projects">Projects & Labs</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="about" class="hero container">
+    <!-- Hero / Home Section -->
+    <section id="home">
+        <div class="container hero-content">
+            <span class="badge"><i class="fa-solid fa-shield-halved"></i> aspiring security engineer</span>
             <h1>Ershad Sulaiman</h1>
-            <p>Computer Science Student | Cybersecurity & Networking</p>
-            <p style="font-size: 1rem;">Fairfax, Virginia | 571-518-6632</p>
-            
+            <p class="hero-desc">
+                Computer Science student at George Mason University, CompTIA Security+ & Network+ certified, building hands-on infrastructure and competing in Capture The Flag events on the way to a career in security engineering.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-terminal"></i> View Projects</a>
+                <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+            </div>
             <div class="social-links">
-                <a href="mailto:ershadsulaiman@outlook.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/ershadsulaiman" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://ershadsulaiman.github.io" target="_blank" title="Portfolio"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/ershadsulaiman" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ershadsulaiman@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="resume.pdf" target="_blank" title="Resume (PDF)"><i class="fa-solid fa-file-pdf"></i></a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Education & Certifications Section -->
-        <section id="education" class="container">
-            <h2>Education & Certifications</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <p class="timeline-location">George Mason University &mdash; Fairfax, VA | Expected December 2028</p>
-                    <ul>
-                        <li><strong>Honors:</strong> GMU Dean's List (Spring 2026)</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <h3>Advanced High School Diploma</h3>
-                    <p class="timeline-location">Thomas Jefferson High School for Science and Technology &mdash; Alexandria, VA | 2025</p>
-                    <ul>
-                        <li><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program</li>
-                    </ul>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="about-card">
+                <p>
+                    Cybersecurity-focused Computer Science student at George Mason University with a Linux/Red Hat background, CompTIA Security+ and Network+ certified, and hands-on experience building a home lab covering Active Directory, network segmentation, and virtualization. Actively competing in CTF competitions, including a sponsored seat at the National Cyber League, while working toward a career in security engineering.
+                </p>
+            </div>
+        </div>
+    </section>
 
-                <div class="timeline-item">
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li>CompTIA Security+ (SY0-701) &mdash; June 2026</li>
-                        <li>CompTIA Network+ (N10-009) &mdash; July 2026</li>
-                    </ul>
+    <!-- Resume / Certifications & Education Section -->
+    <section id="resume" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications & Education</h2>
+            <div class="cert-grid" style="margin-bottom: 3rem;">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>CompTIA Security+ (SY0-701)</h3>
+                    <p class="cert-date">Certified: June 2026</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>CompTIA Network+ (N10-009)</h3>
+                    <p class="cert-date">Certified: July 2026</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Experience & Projects Section -->
-        <section id="experience" class="container">
-            <h2>Experience & Projects</h2>
+            <div class="edu-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="edu-school">George Mason University &mdash; Fairfax, VA &middot; Expected December 2028</p>
+                <p class="edu-details"><strong>GPA:</strong> 3.54/4.00</p>
+                <p class="edu-details"><strong>Relevant Coursework:</strong> Essentials of Computer Science, Intro to Computer Programming, Object-Oriented Programming, Discrete Mathematics, Linear Algebra, Calculus III</p>
+                <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)</p>
+            </div>
+
+            <div class="edu-card" style="margin-top: 20px;">
+                <h3>Advanced High School Diploma</h3>
+                <p class="edu-school">Thomas Jefferson High School for Science and Technology (TJHSST) &mdash; Alexandria, VA &middot; 2025</p>
+                <p class="edu-details"><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program</p>
+            </div>
+
+            <div class="club-badge" style="margin-top: 20px;">
+                <i class="fa-solid fa-users"></i> Incoming member, Mason Competitive Cyber (MasonCC) &mdash; GMU's competitive cybersecurity club
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Labs Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience & Projects</h2>
             <div class="timeline">
-                
-                <!-- Tech Assistant -->
+
+                <!-- CTF & Security Competitions -->
                 <div class="timeline-item">
-                    <h3>Tech Assistant, Hardware Support</h3>
-                    <p class="timeline-location">Fairfax County Public Schools / TJHSST &mdash; Annandale, VA | Summer 2023</p>
-                    <ul>
-                        <li>Reimaged 2,000+ school Chromebooks over 4 weeks and set up desktop and monitor installs as part of a five-person tech team.</li>
-                        <li>Resolved 10+ classroom hardware tickets, getting teachers’ computers, projectors, and printers connected and running, escalating issues beyond scope to the school technician and reporting progress to IT supervisors.</li>
-                    </ul>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>CTF & Security Competitor</h3>
+                        <p class="timeline-location">TryHackMe &middot; picoCTF &middot; pwn.college &middot; CryptoHack &mdash; Fairfax, VA</p>
+                        <ul>
+                            <li>Selected as 1 of 30 sponsored students nationwide to compete in the National Cyber League (NCL) CTF competition.</li>
+                            <li>Built a personal CTF toolkit using Python scripting for automation, spanning Nmap scanning and enumeration, cryptography challenges, and digital forensics (steganography, file analysis, PCAP analysis), applied across live competitions such as gaslightCTF.</li>
+                            <li>Competed solo in BrunnerCTF against four-person teams, placing in the top 40th percentile of participants.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Home Lab -->
                 <div class="timeline-item">
-                    <h3>Home Lab &mdash; Enterprise Network & Active Directory Environment</h3>
-                    <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; VLANs &middot; Tailscale &mdash; Fairfax, VA | June 2026 – Present</p>
-                    <ul>
-                        <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with DNS and DHCP roles, creating AD users, groups, and OUs and domain-joining two Windows 11 client VMs.</li>
-                        <li>Diagnosed and resolved a DHCP pool exhaustion issue on the home network gateway within 10 minutes, restoring connectivity for 20 devices; configured static IP addressing and subnet planning and maintained biweekly VM snapshots and backups across 4 VMs.</li>
-                        <li>Configured 2 VLANs on a managed switch for lab traffic isolation and a Raspberry Pi running Tailscale for encrypted remote access and SSH administration; deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
-                    </ul>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Home Lab &mdash; Networking & Security Environment</h3>
+                        <p class="timeline-location">Proxmox VE &middot; Windows Server &middot; Active Directory &middot; Tailscale &mdash; Fairfax, VA</p>
+                        <ul>
+                            <li>Deployed a Proxmox VE virtualization host (Intel i5-7500, 32GB RAM) running a Windows Server 2025 Active Directory domain controller with DNS and DHCP roles, creating AD users, groups, and OUs and domain-joining two Windows 11 client VMs.</li>
+                            <li>Diagnosed and resolved a DHCP pool exhaustion issue on the production network gateway, solved within 10 minutes, restoring client connectivity.</li>
+                            <li>Configured static IP addressing, subnet planning, and port forwarding on the network gateway, and maintained VM snapshots and backups in Proxmox.</li>
+                            <li>Configured a Raspberry Pi running Tailscale for encrypted remote access and SSH-based administration with 24/7 uptime, and deployed a VXLAN overlay to extend Layer 2 connectivity across segmented subnets.</li>
+                            <li>Designing VLAN segmentation for lab traffic isolation using a managed switch, paired with Tailscale for secure mesh connectivity between devices; documenting lab network diagrams and configurations (in progress).</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Kali Linux Security Workstation -->
+                <!-- Tech Assistant Experience -->
                 <div class="timeline-item">
-                    <h3>Kali Linux Security Workstation</h3>
-                    <p class="timeline-location">Kali &middot; Proxmox VE &middot; Nmap &middot; Tailscale | 2026 – Present</p>
-                    <ul>
-                        <li>Deployed a Kali Linux VM on Proxmox with biweekly snapshots, accessed remotely via SPICE and Tailscale, and used it weekly for CTF work alongside a second install on a MacBook.</li>
-                        <li>Ran Nmap scans against my own lab network to identify exposed hosts and services; used John the Ripper, Netcat, Ghidra, steghide, binwalk, and exiftool for password cracking, reverse engineering, and forensics challenges.</li>
-                    </ul>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Extracurriculars Section -->
-        <section id="extracurriculars" class="container">
-            <h2>Extracurriculars</h2>
-            <div class="timeline">
-                
-                <!-- CTF -->
-                <div class="timeline-item">
-                    <h3>CTF & Security Competitor</h3>
-                    <p class="timeline-location">TryHackMe &middot; picoCTF &middot; pwn.college &middot; CryptoHack &mdash; Fairfax, VA | August 2026 – Present</p>
-                    <ul>
-                        <li>Placed in the first 30 of 100+ competitors in MasonCC’s CTF qualifier, earning a sponsored National Cyber League (NCL) seat.</li>
-                        <li>Completed 50+ challenges and rooms across forensics, cryptography, reverse engineering, and reconnaissance.</li>
-                        <li>Competed solo in BrunnerCTF against four-person teams, placing in the top 40% of 2,900 registered participants.</li>
-                    </ul>
-                </div>
-
-                <!-- MSA -->
-                <div class="timeline-item">
-                    <h3>Treasurer &rarr; President, Muslim Student Association (MSA)</h3>
-                    <p class="timeline-location">TJHSST &mdash; Alexandria, VA | 2024 – 2025</p>
-                    <ul>
-                        <li>Led a board of 10 through weekly meetings, delegating social media, event timing, and treasury coordination, growing average weekly turnout from 24 to 32.</li>
-                        <li>Spearheaded school-wide events, including an Eid celebration (100–150 attendees) and an Iftar (40+), and managed club finances as Treasurer, raising $600 from a single sales event.</li>
-                    </ul>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Tech Assistant &mdash; Fairfax County Public Schools / TJHSST</h3>
+                        <p class="timeline-location">Chromebook Imaging &amp; Hardware Support &middot; Summer 2023 &mdash; Annandale, VA</p>
+                        <ul>
+                            <li>Reimaged 2,000+ school Chromebooks and set up desktop and monitor installs as part of a five-person tech team.</li>
+                            <li>Troubleshot classroom hardware (printers, projectors) and reported progress to IT supervisors.</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Technical Skills Section -->
-        <section id="skills" class="container" style="border-bottom: none;">
-            <h2>Skills</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
-                
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                    <p>Python, Java, Unix</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-laptop"></i> Operating Systems</h3>
+                    <p>Linux (Red Hat), Windows, macOS</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-book-bookmark"></i> Frameworks & Standards</h3>
+                    <p>NIST Cybersecurity Framework, Zero Trust, CIA Triad, AAA Framework, MITRE ATT&CK Fundamentals</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
+                    <p>Git, Proxmox VE, VMware, pfSense, Tailscale, Wireshark, exiftool, steghide, binwalk, CyberChef</p>
+                </div>
                 <div class="skill-category">
                     <h3><i class="fa-solid fa-network-wired"></i> Networking & Protocols</h3>
-                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching, VPN (Tailscale/WireGuard)</p>
+                    <p>TCP/IP, DNS, DHCP, VLANs, VXLAN, Subnetting, Routing & Switching, VPN (IPSec), Wake-on-LAN</p>
                 </div>
-                
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-server"></i> Systems & Security</h3>
-                    <p>Proxmox VE, Windows Server 2025, Active Directory (Groups/OUs, Access Control), Windows 11 Client Management, VM Snapshots & Backups, SSH & Encrypted Remote Access</p>
+                    <h3><i class="fa-solid fa-lock"></i> Security Concepts</h3>
+                    <p>Access Control (RBAC/DAC/MAC), PKI, Symmetric/Asymmetric Encryption, Hashing, MFA, Firewalls, IDS/IPS</p>
                 </div>
-                
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-terminal"></i> Linux & Security Tools</h3>
-                    <p>Kali Linux, Linux CLI (permissions, pipes/text processing, processes), Nmap, John the Ripper, Netcat, Ghidra, steghide, binwalk, exiftool</p>
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Threats & Attacks</h3>
+                    <p>Malware, Ransomware, Phishing, DDoS, Brute Force, Man-in-the-Middle, Insider Threats, Zero-Day Exploits</p>
                 </div>
-                
                 <div class="skill-category">
-                    <h3><i class="fa-solid fa-magnifying-glass"></i> Forensics & Analysis</h3>
-                    <p>Wireshark (PCAP Analysis), CyberChef, Steganography & File Analysis, Cryptography Challenge-Solving</p>
+                    <h3><i class="fa-solid fa-user-check"></i> Soft Skills</h3>
+                    <p>Adaptability</p>
                 </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-code"></i> Programming</h3>
-                    <p>Python, Java (OOP)</p>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-language"></i> Spoken Languages</h3>
-                    <p>Dari, English, Farsi, Tajik (fluent), Spanish (professional)</p>
-                </div>
-
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container contact-container" style="margin: 0 auto;">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I am actively looking for opportunities in security engineering and cybersecurity internships. Feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="mailto:ershadsulaiman@outlook.com" class="contact-item"><i class="fa-solid fa-envelope"></i> ershadsulaiman@outlook.com</a>
+                <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632</a>
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Ershad Sulaiman. All Rights Reserved.</p>
