@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ershad Sulaiman | Cybersecurity & Computer Science Portfolio</title>
+    <meta name="description" content="Ershad Sulaiman — Computer Science student at George Mason University, CompTIA Security+ & Network+ certified, building enterprise home labs, competing in CTFs, and working toward a career in security engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ershadsulaiman.github.io/">
+    <meta property="og:title" content="Ershad Sulaiman | Aspiring Security Engineer">
+    <meta property="og:description" content="CS student at George Mason University, Security+ & Network+ certified. Home lab, accessibility compliance tooling, and CTF competitor.">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-main: #ffffff;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+            line-height: 1.6;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        /* Header */
+        header {
+            background: var(--bg-main);
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .nav-btn {
+            background-color: var(--accent);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .nav-btn:hover {
+            background-color: var(--accent-hover);
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        /* Hero Section */
+        #home {
+            padding: 12rem 0 8rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            text-align: center;
+        }
+        .badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .hero-desc {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .primary-btn {
+            background-color: var(--accent);
+            color: white;
+        }
+        .primary-btn:hover {
+            background-color: var(--accent-hover);
+        }
+        .secondary-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid #475569;
+        }
+        .secondary-btn:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .social-links a {
+            color: #94a3b8;
+            font-size: 1.25rem;
+            transition: var(--transition);
+        }
+        .social-links a:hover {
+            color: white;
+        }
+        /* Sections General */
+        .section {
+            padding: 5rem 0;
+        }
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        /* About Section */
+        .about-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 1.125rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .cert-badge {
+            height: 100px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+        .cert-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        .cert-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+        /* Timeline Experience */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 2px;
+            background: var(--border-color);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 50px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 14px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .timeline-location {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .timeline-content ul {
+            list-style-type: disc;
+            padding-left: 1.2rem;
+        }
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .skill-category h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .skill-category h3 i {
+            color: var(--accent);
+        }
+        .skill-category p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+        /* Education */
+        .edu-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .edu-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .edu-school {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .edu-details {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .club-badge {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 500;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .club-badge i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        /* Contact */
+        .contact-container {
+            text-align: center;
+            max-width: 700px;
+        }
+        .contact-container p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .contact-item i {
+            color: var(--accent);
+        }
+        .contact-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.875rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem 0;
+                background: var(--bg-main);
+                border-bottom: 1px solid var(--border-color);
+            }
+            nav.open ul {
+                display: flex;
+            }
+            #home h1 {
+                font-size: 2.25rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                padding: 0 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo">Ershad Sulaiman</a>
+            <nav id="site-nav">
+                <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+                <ul id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#projects">Projects & Labs</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Home Section -->
+    <section id="home">
+        <div class="container hero-content">
+            <span class="badge"><i class="fa-solid fa-shield-halved"></i> Aspiring Security Engineer</span>
+            <h1>Ershad Sulaiman</h1>
+            <p class="hero-desc">
+                Computer Science student at George Mason University, CompTIA Security+ & Network+ certified, building enterprise home labs, and competing in Capture The Flag events on the way to a career in security engineering.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-terminal"></i> View Projects</a>
+                <a href="resume.pdf" target="_blank" rel="noopener" class="btn secondary-btn"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+                <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-envelope"></i> Get In Touch</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/ershadsulaiman" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="mailto:ershadsulaiman@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                <a href="resume.pdf" target="_blank" rel="noopener" aria-label="Resume (PDF)" title="Resume (PDF)"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="about-card">
+                <p>
+                    Cybersecurity-focused Computer Science student at George Mason University with a Kali Linux background, CompTIA Security+ and Network+ certified, and working toward AWS Certified Solutions Architect &ndash; Associate. Hands-on experience building an enterprise-style home lab covering Active Directory, Group Policy, firewalling, network segmentation, vulnerability scanning, and virtualization. Placed 2nd in GMU&rsquo;s Challenge X with Unissant on a Section 508 / WCAG accessibility compliance tool, and earned a sponsored National Cyber League seat through Mason Competitive Cyber, where my team finished 24th of 3,333.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume / Certifications & Education Section -->
+    <section id="resume" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications & Education</h2>
+
+            <div class="cert-grid" style="margin-bottom: 3rem;">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>CompTIA Security+ (SY0-701)</h3>
+                    <p class="cert-date">Certified: June 2026</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>CompTIA Network+ (N10-009)</h3>
+                    <p class="cert-date">Certified: July 2026</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                    <h3>AWS Certified Solutions Architect &ndash; Associate (SAA-C03)</h3>
+                    <p class="cert-date">In progress</p>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="edu-school">George Mason University &mdash; Fairfax, VA &middot; Expected December 2028</p>
+                <p class="edu-details"><strong>Honors:</strong> GMU Dean's List (Spring 2026)</p>
+            </div>
+
+            <div class="edu-card" style="margin-top: 20px;">
+                <h3>Advanced High School Diploma</h3>
+                <p class="edu-school">Thomas Jefferson High School for Science and Technology (TJHSST) &mdash; Alexandria, VA &middot; 2025</p>
+                <p class="edu-details"><strong>Honors:</strong> National Honor Society (NHS), Early College Scholars Program</p>
+            </div>
+
+            <div class="club-badge" style="margin-top: 20px;">
+                <i class="fa-solid fa-users"></i> Member, Mason Competitive Cyber (MasonCC) &mdash; GMU's competitive cybersecurity club &middot; August 2026 &ndash; Present
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Labs Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience & Projects</h2>
+            <div class="timeline">
+
+                <!-- Challenge X -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Accessibility Compliance Checker (ADJ) &mdash; 2nd Place</h3>
+                        <p class="timeline-location">Unissant &times; George Mason University &mdash; Challenge X &middot; Python &mdash; Fairfax, VA &middot; September 2026 &ndash; November 2026</p>
+                        <ul>
+                            <li>Built Python checks and test data for a team-developed Section 508 / WCAG accessibility compliance tool that placed 2nd in Unissant &times; GMU&rsquo;s Challenge X.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Home Lab -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Home Lab &mdash; Enterprise Network & Active Directory Environment</h3>
+                        <p class="timeline-location">Proxmox VE &middot; Windows Server 2025 &middot; Active Directory &middot; Group Policy &middot; OPNsense &middot; VLANs &middot; VXLAN &middot; Tailscale &middot; OpenVAS &mdash; Fairfax, VA &middot; June 2026 &ndash; August 2026</p>
+                        <ul>
+                            <li>Built a Proxmox VE lab with a Windows Server 2025 domain controller, two domain-joined Windows 11 clients, and Group Policy enforcing password, lockout, and USB/app restrictions. Segmented traffic across 2 VLANs behind an OPNsense default-deny firewall, extended Layer 2 with VXLAN, and ran OpenVAS scans while managing the lab remotely over SSH and Tailscale.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTF & Security Competitions -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>CTF & Security Competitor &mdash; Mason Competitive Cyber</h3>
+                        <p class="timeline-location">MasonCC &middot; NCL &middot; TryHackMe &middot; picoCTF &middot; pwn.college &middot; CryptoHack &mdash; Fairfax, VA &middot; August 2026 &ndash; Present</p>
+                        <ul>
+                            <li>Placed top 30 of 100+ in MasonCC&rsquo;s qualifier to earn a sponsored NCL seat, and completed 50+ challenges across forensics, crypto, reversing, and recon. In NCL, placed 24th of 3,333 teams with a perfect 3,000/3,000 score and 366th of 5,901 individually (top 6.2%).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tech Assistant Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Tech Assistant &mdash; Fairfax County Public Schools / TJHSST</h3>
+                        <p class="timeline-location">Chromebook Imaging &amp; Hardware Support &mdash; Alexandria, VA &middot; June 2023 &ndash; August 2023</p>
+                        <ul>
+                            <li>Was one of five people on an IT team that imaged and deployed 2,000+ student Chromebooks, and also installed desktops and monitors, fixed printer and projector connectivity for teachers, and escalated hardware faults.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-network-wired"></i> Networking</h3>
+                    <p>TCP/IP, DNS, DHCP, Subnetting, Routing &amp; Switching, VLANs, VXLAN, OPNsense, Tailscale/WireGuard</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-server"></i> Systems &amp; Cloud</h3>
+                    <p>Proxmox VE, Windows Server 2025, Active Directory, Group Policy, AWS (in progress)</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-toolbox"></i> Security Tools</h3>
+                    <p>Kali Linux, Nmap, OpenVAS, Wireshark, Ghidra, John the Ripper, Netcat, CyberChef</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Detection &amp; Analysis</h3>
+                    <p>OSINT, Log Analysis, Vulnerability Scanning, PCAP Analysis, Forensics</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Programming &amp; Scripting</h3>
+                    <p>Python, PowerShell, Java, Git</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-language"></i> Spoken Languages</h3>
+                    <p>Dari, English, Farsi, Tajik (fluent); Spanish (limited working proficiency)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container contact-container" style="margin: 0 auto;">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I am actively looking for opportunities in security engineering and cybersecurity internships. Feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="mailto:ershadsulaiman@outlook.com" class="contact-item"><i class="fa-solid fa-envelope"></i> ershadsulaiman@outlook.com</a>
+                <a href="tel:5715186632" class="contact-item"><i class="fa-solid fa-phone"></i> 571-518-6632</a>
+                <a href="https://linkedin.com/in/ershad-sulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ershad-sulaiman</a>
+                <a href="https://github.com/ershadsulaiman" target="_blank" class="contact-item"><i class="fa-brands fa-github"></i> github.com/ershadsulaiman</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ershad Sulaiman. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('site-nav');
+        const toggle = nav.querySelector('.menu-toggle');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        nav.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('aria-label', 'Open menu');
+            });
+        });
+    </script>
+
+</body>
+</html>
